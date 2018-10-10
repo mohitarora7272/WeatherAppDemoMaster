@@ -73,7 +73,6 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.MyViewHo
     @SuppressLint({"SetTextI18n", "DefaultLocale"})
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
-        //2018-10-15 09:00:00 yyyy-MM-dd hh:mm:ss
         holder.tvMain.setText(list.get(position).getMains());
         holder.tvDes.setText(list.get(position).getDescription().toUpperCase(Locale.US));
         holder.tvTemp.setText("Temp: " + String.format("%.0f", c2f(Double.parseDouble(list.get(position).getTemp()))) + (char) 0x00B0 + "F");
